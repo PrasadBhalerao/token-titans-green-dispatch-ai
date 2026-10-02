@@ -1,0 +1,1 @@
+"""GreenDispatch AI prototype package."""

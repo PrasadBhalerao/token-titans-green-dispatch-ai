@@ -1,0 +1,43 @@
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Test, lint, and coverage artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Local secrets and machine-specific configuration
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Generated run artifacts
+outputs/runs/*
+!outputs/runs/
+!outputs/runs/README.md
+
+# User-created scenario snapshots
+data/user-edited-scenarios/*.json
+!data/user-edited-scenarios/README.md
+!data/user-edited-scenarios/scenario-template.json
+
+# Codex/presentation build scratch files
+.codex-build/
+.codex-finalizer/
+.chart-data-*/
+
+# Local logs and OS files
+*.log
+.DS_Store
+Thumbs.db
+desktop.ini

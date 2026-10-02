@@ -1,0 +1,64 @@
+{
+  "scenario_id": "scenario_template",
+  "scenario_name": "Template user-edited scenario",
+  "schema_version": "1.0",
+  "created_at": "YYYY-MM-DDTHH:MM:SS",
+  "source": {
+    "source_dataset": "data/greendispatch-ai-dataset",
+    "source_scenario_id": "baseline",
+    "source_run_id": null
+  },
+  "data_safety": {
+    "synthetic_data_only": true,
+    "contains_customer_data": false,
+    "contains_personal_data": false,
+    "contains_confidential_data": false,
+    "contains_client_branding": false
+  },
+  "assumptions": {
+    "distance_method": "synthetic distance matrix or user-provided override",
+    "fuel_energy_method": "vehicle profile fuel/energy rate",
+    "emission_factor_source": "data/greendispatch-ai-dataset/emission_factors.csv",
+    "notes": []
+  },
+  "jobs": [
+    {
+      "job_id": "J_NEW_001",
+      "destination_id": "L01",
+      "job_type": "delivery",
+      "demand_kg": 100,
+      "volume_m3": 1.0,
+      "priority": "normal",
+      "ready_time": "09:00",
+      "due_time": "12:00",
+      "service_minutes": 15
+    }
+  ],
+  "vehicles": [
+    {
+      "vehicle_id": "VAN_D_01",
+      "vehicle_name": "Diesel Van 01",
+      "vehicle_class": "light_commercial_van",
+      "energy_type": "diesel",
+      "capacity_kg": 1000,
+      "capacity_m3": 10.0,
+      "fuel_rate_l_per_100km": 9.8,
+      "energy_rate_kwh_per_100km": null,
+      "idle_fuel_l_per_hour": 0.8,
+      "idle_energy_kwh_per_hour": null,
+      "co2e_factor": 2.71,
+      "co2e_factor_unit": "kgCO2e_per_liter",
+      "operating_cost_per_km": 22.0
+    }
+  ],
+  "locations": [],
+  "distance_matrix_overrides": [],
+  "disruption_events": [],
+  "change_log": [
+    {
+      "changed_at": "YYYY-MM-DDTHH:MM:SS",
+      "change_type": "created_from_template",
+      "summary": "Initial user-edited scenario template."
+    }
+  ]
+}

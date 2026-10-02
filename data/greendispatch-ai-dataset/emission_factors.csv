@@ -1,0 +1,4 @@
+"factor_id","activity","value","unit","scope","source","source_url","usage_note"
+"EF_DIESEL_AU_2026","diesel_combustion","2.71","kgCO2e_per_liter","scope_1","Australia DCCEEW National Greenhouse Accounts Factors 2026","https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors-2026","Demo factor for diesel vehicles where local fuel factor is not integrated."
+"EF_PETROL_AU_2026","petrol_combustion","2.319","kgCO2e_per_liter","scope_1","Australia DCCEEW National Greenhouse Accounts Factors 2026","https://www.dcceew.gov.au/climate-change/publications/national-greenhouse-accounts-factors-2026","Demo factor for petrol vehicles where local fuel factor is not integrated."
+"EF_INDIA_GRID_2025","electricity_india_grid","0.71","kgCO2e_per_kwh","scope_2","Central Electricity Authority CO2 Baseline Database v21.0/v22.0 listing","https://cea.nic.in/cdm-co2-baseline-database/?lang=en","Demo grid factor for EV energy consumption."

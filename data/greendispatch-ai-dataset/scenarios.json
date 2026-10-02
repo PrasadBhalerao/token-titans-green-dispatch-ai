@@ -1,0 +1,37 @@
+{
+  "dataset_name": "GreenDispatch AI synthetic dispatch dataset",
+  "generated_on": "2026-10-02",
+  "scenarios": [
+    {
+      "id": "baseline",
+      "label": "Manual baseline dispatch plan",
+      "description": "First-available vehicle plan with fragmented trips and higher idle time."
+    },
+    {
+      "id": "optimized",
+      "label": "Agentic carbon-aware optimized plan",
+      "description": "Consolidated routes, EV used for compact route, and lower idle time."
+    },
+    {
+      "id": "fuel_optimized",
+      "label": "Fuel-optimized dispatch plan",
+      "description": "Vehicle assignment prioritizes lower petrol and diesel usage while preserving delivery coverage."
+    },
+    {
+      "id": "distance_optimized",
+      "label": "Distance-optimized dispatch plan",
+      "description": "Route sequence reduces repeated stops and total kilometers."
+    },
+    {
+      "id": "reoptimized",
+      "label": "Vehicle unavailable disruption",
+      "description": "Revised plan after VAN_D_01 becomes unavailable."
+    }
+  ],
+  "formulas": {
+    "fuel_liters": "distance_km * fuel_rate_l_per_100km / 100 + idle_minutes * idle_fuel_l_per_hour / 60",
+    "energy_kwh": "distance_km * energy_rate_kwh_per_100km / 100 + idle_minutes * idle_energy_kwh_per_hour / 60",
+    "co2e_fuel": "fuel_liters * kgCO2e_per_liter",
+    "co2e_ev": "energy_kwh * kgCO2e_per_kwh"
+  }
+}

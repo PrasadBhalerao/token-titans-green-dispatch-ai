@@ -1,0 +1,8 @@
+"comparison","metric","baseline","optimized","absolute_reduction","reduction_pct","unit"
+"baseline_vs_optimized","trips","6","4","2","33.3","count"
+"baseline_vs_optimized","distance","190.82","137.22","53.6","28.1","km"
+"baseline_vs_optimized","fuel","23.31","15.13","8.18","35.1","liters"
+"baseline_vs_optimized","co2e","62.14","43.64","18.5","29.8","kgCO2e"
+"baseline_vs_optimized","idle_time","113","39","74","65.5","minutes"
+"baseline_vs_optimized","planning_time","90","14","76","84.4","minutes"
+"baseline_vs_optimized","operating_cost_index","4766.62","3489.23","1277.39","26.8","index"

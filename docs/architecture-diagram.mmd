@@ -1,0 +1,91 @@
+flowchart TD
+    user["User / Dispatch Planner"]
+    dashboard["Streamlit Dashboard"]
+    scenarioInput["Scenario Controls<br/>selector, editable jobs, editable vehicles"]
+    approval["Human Approval Gate<br/>approve / reject / request revision"]
+    summary["Decision Summary<br/>baseline vs optimized impact"]
+
+    subgraph ui["UI Layer"]
+        dashboard
+        scenarioInput
+        approval
+        summary
+    end
+
+    subgraph data["Local Data Layer"]
+        sourceData["Source Demo Dataset<br/>data/greendispatch-ai-dataset"]
+        editedScenarios["User Edited Scenarios<br/>data/user-edited-scenarios/*.json"]
+        runArtifacts["Run Artifacts<br/>outputs/runs/&lt;run_id&gt;/*.json"]
+    end
+
+    subgraph core["Deterministic Core"]
+        loader["Data Loader<br/>src/core/data_loader.py"]
+        baseline["Baseline Plan<br/>src/core/baseline.py"]
+        optimizer["Optimizer / Scoring<br/>src/core/optimizer.py"]
+        emissions["Emissions Calculator<br/>src/core/emissions.py"]
+        metrics["Metrics Calculator<br/>src/core/metrics.py"]
+        constraints["Constraint Validator<br/>src/core/constraints.py"]
+        planStore["Plan Store<br/>src/core/plan_store.py"]
+        scenarioStore["Scenario Store<br/>src/core/scenario_store.py"]
+    end
+
+    subgraph agents["Agentic Workflow"]
+        orchestrator["Orchestrator Agent"]
+        forecasting["Forecasting Agent"]
+        carbon["Carbon Intelligence Agent"]
+        optAgent["Optimization Agent"]
+        constraintAgent["Constraint Agent"]
+        monitoring["Monitoring Agent"]
+        trace["Agent Trace<br/>structured JSON"]
+    end
+
+    subgraph outputs["Dashboard Outputs"]
+        baselineView["Baseline Plan View"]
+        optimizedView["Optimized Plan View"]
+        disruptionView["Disruption + Re-optimization View"]
+        sustainabilityView["Agent Sustainability Panel"]
+        auditView["Approval Audit Trail"]
+    end
+
+    user --> dashboard
+    dashboard --> scenarioInput
+    scenarioInput --> loader
+    loader --> sourceData
+    scenarioInput --> scenarioStore
+    scenarioStore <--> editedScenarios
+
+    dashboard --> orchestrator
+    orchestrator --> forecasting
+    orchestrator --> baseline
+    orchestrator --> optAgent
+    optAgent --> optimizer
+    orchestrator --> carbon
+    carbon --> emissions
+    orchestrator --> constraintAgent
+    constraintAgent --> constraints
+    orchestrator --> monitoring
+    monitoring --> optimizer
+    optimizer --> metrics
+    emissions --> metrics
+    constraints --> trace
+    forecasting --> trace
+    carbon --> trace
+    optAgent --> trace
+    constraintAgent --> trace
+    monitoring --> trace
+    orchestrator --> trace
+
+    orchestrator --> baselineView
+    orchestrator --> optimizedView
+    monitoring --> disruptionView
+    trace --> sustainabilityView
+    optimizedView --> approval
+    approval --> auditView
+    approval --> summary
+    summary --> planStore
+    trace --> planStore
+    baselineView --> planStore
+    optimizedView --> planStore
+    disruptionView --> planStore
+    auditView --> planStore
+    planStore --> runArtifacts

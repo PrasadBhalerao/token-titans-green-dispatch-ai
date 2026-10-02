@@ -1,0 +1,2 @@
+"event_id","event_type","event_time","affected_vehicle_id","description","agent_action","output_scenario"
+"D001","vehicle_unavailable","13:15","VAN_D_01","Diesel Van 01 becomes unavailable before the southeast/east route is dispatched.","Monitoring Agent triggers reoptimization; Constraint Agent checks capacity; Optimization Agent moves east workload to VAN_D_02 and extends TRUCK_D_04 route.","reoptimized"

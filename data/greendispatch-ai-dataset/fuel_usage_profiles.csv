@@ -1,0 +1,5 @@
+"profile_id","vehicle_class","energy_type","low_realistic","typical","high_realistic","unit","demo_value_used","basis"
+"FP_DIESEL_VAN_URBAN","light_commercial_van","diesel","8.5","10","12.5","L_per_100km","9.8-10.4","Real-world urban delivery van estimate, aligned with telematics/fuel-card modeling practice."
+"FP_PETROL_VAN_URBAN","light_commercial_van","petrol","10","11.5","13.5","L_per_100km","11.5","Real-world urban petrol van estimate, aligned with distance-based fuel modeling practice."
+"FP_MEDIUM_TRUCK_URBAN","medium_truck","diesel","15","18","22","L_per_100km","18.0","Medium-duty mixed urban route estimate."
+"FP_EV_VAN_URBAN","electric_light_van","electric","18","22","28","kWh_per_100km","22.0","Urban EV van energy estimate with service load and stop-start driving."

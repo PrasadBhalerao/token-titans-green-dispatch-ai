@@ -1,0 +1,6 @@
+"scenario","trips","vehicles_used","total_distance_km","total_fuel_liters","total_energy_kwh","total_co2e_kg","total_idle_minutes","total_travel_minutes","total_service_minutes","planning_time_minutes","avg_capacity_utilization_pct","jobs_on_time","total_jobs","sla_adherence_pct","operating_cost_index"
+"baseline","6","4","190.82","23.31","0","62.14","113","442","262","90","40.7","13","14","92.9","4766.62"
+"optimized","4","4","137.22","15.13","5.51","43.64","39","326","262","14","58.6","14","14","100","3489.23"
+"reoptimized","4","4","147.83","18.47","5.51","52.69","42","346","262","9","53.4","14","14","100","4223.19"
+"fuel_optimized","4","4","137.22","14.55","6.15","43.8","39","326","262","16","55.2","14","14","100","3424.9"
+"distance_optimized","4","4","125.61","16.99","0","44.75","34","297","262","12","55.8","14","14","100","3654.49"

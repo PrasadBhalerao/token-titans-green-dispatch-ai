@@ -1,0 +1,5 @@
+"source_name","local_status","use_for","url","note"
+"Solomon VRPTW via SINTEF","not_copied_large_external_reference","benchmark time-window routing","https://www.sintef.no/projectweb/top/vrptw/100-customers/","Use for formal benchmark comparison; add vehicle energy profiles to make it carbon-aware."
+"CVRPLIB XML100","not_copied_large_external_reference","capacitated routing benchmark with optimal solutions","https://galgos.inf.puc-rio.br/cvrplib/en/xml100","Use for absolute optimization gap measurement."
+"Amazon Last Mile Routing Research Challenge","not_copied_license_noncommercial_reference","real-world last-mile route realism","https://registry.opendata.aws/amazon-last-mile-challenges/","Large dataset; CC BY-NC 4.0; useful for advanced demo if license permits."
+"Vehicle Energy Dataset","not_copied_large_external_reference","real OBD-II fuel and energy rate modeling","https://github.com/gsoh/VED","Fuel Rate L/hr and EV/HEV telemetry can calibrate fuel profiles."
